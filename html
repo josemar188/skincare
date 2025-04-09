@@ -1,343 +1,423 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow Skin - Cuidados para sua pele</title>
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#f9a8d4',secondary:'#f0abfc'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fdfcfd;
-        }
-        .hide-scroll-bar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .hide-scroll-bar::-webkit-scrollbar {
-            display: none;
-        }
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Skin - Cuidados para sua pele</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#f9a8d4',secondary:'#f0abfc'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #fdfcfd;
+}
+.hide-scroll-bar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+display: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+</style>
 </head>
 <body class="bg-white text-gray-800">
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-white shadow-sm z-50 px-4 py-3">
-        <div class="flex items-center justify-between">
-            <div class="w-8 h-8 flex items-center justify-center cursor-pointer">
-                <i class="ri-menu-line ri-lg"></i>
-            </div>
-            <div class="text-center">
-                <h1 class="font-['Pacifico'] text-primary text-2xl">logo</h1>
-            </div>
-            <div class="w-8 h-8 flex items-center justify-center cursor-pointer relative">
-                <i class="ri-shopping-cart-2-line ri-lg"></i>
-                <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Search Bar -->
-    <div class="fixed top-14 w-full bg-white z-40 px-4 py-2">
-        <div class="relative">
-            <input type="text" placeholder="Buscar produtos..." class="w-full py-2 pl-10 pr-4 bg-gray-100 rounded-full text-sm focus:outline-none">
-            <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center">
-                <i class="ri-search-line text-gray-400"></i>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="pt-28 pb-20">
-        <!-- Banner -->
-        <div class="relative w-full h-48 mb-6 overflow-hidden">
-            <img src="https://public.readdy.ai/ai/img_res/8e5bc8ee4d46f4012fad628a74a4dcc9.jpg" alt="Banner de produtos de skincare" class="w-full h-full object-cover object-top">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-4">
-                <h2 class="text-white text-xl font-semibold mb-1">Novos Produtos de Verão</h2>
-                <p class="text-white text-sm mb-3">Proteção e hidratação para dias ensolarados</p>
-                <button class="bg-primary text-white py-2 px-4 !rounded-button w-40 font-medium cursor-pointer">Comprar Agora</button>
-            </div>
-        </div>
-
-        <!-- Categories -->
-        <div class="px-4 mb-8">
-            <h2 class="text-lg font-semibold mb-4">Categorias</h2>
-            <div class="grid grid-cols-4 gap-3">
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 rounded-full overflow-hidden mb-2">
-                        <img src="https://public.readdy.ai/ai/img_res/aa09353d860402f32df3da88026445e0.jpg" alt="Limpeza Facial" class="w-full h-full object-cover">
-                    </div>
-                    <span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Limpeza Facial</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 rounded-full overflow-hidden mb-2">
-                        <img src="https://public.readdy.ai/ai/img_res/123a11baa6cd872aceb03df72f2530a0.jpg" alt="Hidratantes" class="w-full h-full object-cover">
-                    </div>
-                    <span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Hidratantes</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 rounded-full overflow-hidden mb-2">
-                        <img src="https://public.readdy.ai/ai/img_res/0b7e0837e4678ce73a3b32a07955d3d0.jpg" alt="Proteção Solar" class="w-full h-full object-cover">
-                    </div>
-                    <span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Proteção Solar</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 rounded-full overflow-hidden mb-2">
-                        <img src="https://public.readdy.ai/ai/img_res/1931adfbd15875407b2ae5cbec3c909b.jpg" alt="Tratamentos" class="w-full h-full object-cover">
-                    </div>
-                    <span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Tratamentos</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Featured Products -->
-        <div class="mb-8">
-            <div class="px-4 mb-3 flex justify-between items-center">
-                <h2 class="text-lg font-semibold">Mais Vendidos</h2>
-                <a href="#" class="text-primary text-sm font-medium cursor-pointer">Ver todos</a>
-            </div>
-            <div class="hide-scroll-bar overflow-x-auto pl-4">
-                <div class="flex gap-4 pb-4 w-max">
-                    <!-- Product 1 -->
-                    <div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-36 overflow-hidden">
-                            <img src="https://public.readdy.ai/ai/img_res/8d82e33557f03e4f78ce2fcc061f2931.jpg" alt="Sérum Facial" class="w-full h-full object-cover object-top">
-                        </div>
-                        <div class="p-2">
-                            <div class="flex items-center mb-1">
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-half-fill text-yellow-400 text-xs"></i>
-                                <span class="text-xs text-gray-500 ml-1">4.5</span>
-                            </div>
-                            <h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Sérum Vitamina C</h3>
-                            <p class="text-primary font-semibold text-sm mb-2">R$ 89,90</p>
-                            <button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 2 -->
-                    <div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-36 overflow-hidden">
-                            <img src="https://public.readdy.ai/ai/img_res/1c32341639afc38e4c33d24b5b776042.jpg" alt="Hidratante Facial" class="w-full h-full object-cover object-top">
-                        </div>
-                        <div class="p-2">
-                            <div class="flex items-center mb-1">
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <span class="text-xs text-gray-500 ml-1">5.0</span>
-                            </div>
-                            <h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Hidratante Noturno</h3>
-                            <p class="text-primary font-semibold text-sm mb-2">R$ 75,90</p>
-                            <button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 3 -->
-                    <div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-36 overflow-hidden">
-                            <img src="https://public.readdy.ai/ai/img_res/f2e38148b57d80506ffe8d7f64b18c92.jpg" alt="Protetor Solar" class="w-full h-full object-cover object-top">
-                        </div>
-                        <div class="p-2">
-                            <div class="flex items-center mb-1">
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-line text-yellow-400 text-xs"></i>
-                                <span class="text-xs text-gray-500 ml-1">4.0</span>
-                            </div>
-                            <h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Protetor Solar FPS 50</h3>
-                            <p class="text-primary font-semibold text-sm mb-2">R$ 65,90</p>
-                            <button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 4 -->
-                    <div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-36 overflow-hidden">
-                            <img src="https://public.readdy.ai/ai/img_res/bfff06c7746b8b17a5c6582614bc1cee.jpg" alt="Água Micelar" class="w-full h-full object-cover object-top">
-                        </div>
-                        <div class="p-2">
-                            <div class="flex items-center mb-1">
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-fill text-yellow-400 text-xs"></i>
-                                <i class="ri-star-half-fill text-yellow-400 text-xs"></i>
-                                <span class="text-xs text-gray-500 ml-1">4.7</span>
-                            </div>
-                            <h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Água Micelar Suave</h3>
-                            <p class="text-primary font-semibold text-sm mb-2">R$ 45,90</p>
-                            <button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Offers Section -->
-        <div class="px-4 mb-8">
-            <h2 class="text-lg font-semibold mb-4">Ofertas Especiais</h2>
-            <div class="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-4 flex items-center">
-                <div class="w-1/2">
-                    <h3 class="text-base font-semibold mb-1">15% OFF</h3>
-                    <p class="text-xs mb-3">Em todos os produtos para pele sensível</p>
-                    <button class="bg-primary text-white py-1.5 px-3 text-xs !rounded-button cursor-pointer">Ver Ofertas</button>
-                </div>
-                <div class="w-1/2">
-                    <img src="https://public.readdy.ai/ai/img_res/bc9828b40fe7455b49180e7d0ad301b7.jpg" alt="Ofertas especiais" class="w-full h-auto rounded-lg">
-                </div>
-            </div>
-        </div>
-
-        <!-- Tips Section -->
-        <div class="mb-8">
-            <div class="px-4 mb-3">
-                <h2 class="text-lg font-semibold">Dicas de Skincare</h2>
-            </div>
-            <div class="hide-scroll-bar overflow-x-auto pl-4">
-                <div class="flex gap-4 pb-4 w-max">
-                    <!-- Tip 1 -->
-                    <div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-32 overflow-hidden">
-                            <img src="https://public.readdy.ai/ai/img_res/230f94d2a83f9f864ad6a14d035bb979.jpg" alt="Dica de skincare" class="w-full h-full object-cover object-top">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="text-sm font-medium mb-1">Como aplicar sérum corretamente</h3>
-                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Aprenda a técnica correta para maximizar os benefícios do seu sérum facial.</p>
-                            <a href="#" class="text-primary text-xs font-medium cursor-pointer">Ler mais</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Tip 2 -->
-                    <div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-32 overflow-hidden">
-                            <img src="https://public.readdy.ai/ai/img_res/c2383bef32d0a2d10ccb12a83d31585c.jpg" alt="Dica de skincare" class="w-full h-full object-cover object-top">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="text-sm font-medium mb-1">Máscaras faciais para cada tipo de pele</h3>
-                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Descubra qual a máscara ideal para o seu tipo de pele e seus benefícios.</p>
-                            <a href="#" class="text-primary text-xs font-medium cursor-pointer">Ler mais</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Tip 3 -->
-                    <div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-32 overflow-hidden">
-                            <img src="https://public.readdy.ai/ai/img_res/1dcb0a4dd9a195f87d4b9256f09cbe49.jpg" alt="Dica de skincare" class="w-full h-full object-cover object-top">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="text-sm font-medium mb-1">Proteção solar diária: por que é essencial</h3>
-                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Entenda a importância do protetor solar mesmo em dias nublados.</p>
-                            <a href="#" class="text-primary text-xs font-medium cursor-pointer">Ler mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="px-4 mb-8">
-            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-4">
-                <h2 class="text-base font-semibold mb-2">Inscreva-se na nossa newsletter</h2>
-                <p class="text-xs text-gray-600 mb-3">Receba dicas de skincare e ofertas exclusivas diretamente no seu email.</p>
-                <div class="flex gap-2 mb-3">
-                    <input type="email" placeholder="Seu email" class="flex-1 py-2 px-3 rounded-lg text-sm border-none bg-white focus:outline-none">
-                    <button class="bg-primary text-white py-2 px-4 !rounded-button text-sm font-medium cursor-pointer">Inscrever</button>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="w-5 h-5 flex items-center justify-center text-primary">
-                        <i class="ri-gift-line"></i>
-                    </div>
-                    <p class="text-xs">10% de desconto na primeira compra</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Tab Bar -->
-    <div class="fixed bottom-0 w-full bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50">
-        <div class="grid grid-cols-5 h-16">
-            <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
-                <div class="w-6 h-6 flex items-center justify-center">
-                    <i class="ri-home-5-fill text-primary"></i>
-                </div>
-                <span class="text-xs mt-1 text-primary">Início</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
-                <div class="w-6 h-6 flex items-center justify-center">
-                    <i class="ri-apps-line text-gray-400"></i>
-                </div>
-                <span class="text-xs mt-1 text-gray-500">Categorias</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
-                <div class="w-6 h-6 flex items-center justify-center">
-                    <i class="ri-heart-line text-gray-400"></i>
-                </div>
-                <span class="text-xs mt-1 text-gray-500">Favoritos</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
-                <div class="w-6 h-6 flex items-center justify-center">
-                    <i class="ri-shopping-bag-line text-gray-400"></i>
-                </div>
-                <span class="text-xs mt-1 text-gray-500">Pedidos</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
-                <div class="w-6 h-6 flex items-center justify-center">
-                    <i class="ri-user-line text-gray-400"></i>
-                </div>
-                <span class="text-xs mt-1 text-gray-500">Perfil</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Floating Action Button -->
-    <div class="fixed right-4 bottom-20 z-40">
-        <button class="w-12 h-12 bg-primary rounded-full shadow-lg flex items-center justify-center cursor-pointer">
-            <i class="ri-customer-service-2-fill text-white ri-lg"></i>
-        </button>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add to cart functionality
-            const addButtons = document.querySelectorAll('button:not([type])');
-            addButtons.forEach(button => {
-                if (button.textContent.includes('Adicionar')) {
-                    button.addEventListener('click', function() {
-                        const productName = this.closest('div').querySelector('h3').textContent;
-                        
-                        // Create toast notification
-                        const toast = document.createElement('div');
-                        toast.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm z-50';
-                        toast.textContent = `${productName} adicionado ao carrinho`;
-                        document.body.appendChild(toast);
-                        
-                        // Remove toast after 2 seconds
-                        setTimeout(() => {
-                            toast.remove();
-                        }, 2000);
-                    });
-                }
-            });
-        });
-    </script>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-white shadow-sm z-50 px-4 py-3">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+<div class="text-center">
+<h1 class="font-['Pacifico'] text-primary text-2xl">logo</h1>
+</div>
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer relative">
+<i class="ri-shopping-cart-2-line ri-lg"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+</div>
+</div>
+</nav>
+<!-- Search Bar -->
+<div class="fixed top-14 w-full bg-white z-40 px-4 py-2">
+<div class="relative">
+<input type="text" placeholder="Buscar produtos..." class="w-full py-2 pl-10 pr-4 bg-gray-100 rounded-full text-sm focus:outline-none">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center">
+<i class="ri-search-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="pt-28 pb-20">
+<!-- Banner -->
+<div class="relative w-full h-48 mb-6 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/8e5bc8ee4d46f4012fad628a74a4dcc9.jpg" alt="Banner de produtos de skincare" class="w-full h-full object-cover object-top">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-4">
+<h2 class="text-white text-xl font-semibold mb-1">Novos Produtos de Verão</h2>
+<p class="text-white text-sm mb-3">Proteção e hidratação para dias ensolarados</p>
+<button class="bg-primary text-white py-2 px-4 !rounded-button w-40 font-medium cursor-pointer">Comprar Agora</button>
+</div>
+</div>
+<!-- Categories -->
+<div class="px-4 mb-8">
+<h2 class="text-lg font-semibold mb-4">Categorias</h2>
+<div class="grid grid-cols-4 gap-3">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-2">
+<img src="https://public.readdy.ai/ai/img_res/aa09353d860402f32df3da88026445e0.jpg" alt="Limpeza Facial" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Limpeza Facial</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-2">
+<img src="https://public.readdy.ai/ai/img_res/123a11baa6cd872aceb03df72f2530a0.jpg" alt="Hidratantes" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Hidratantes</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-2">
+<img src="https://public.readdy.ai/ai/img_res/0b7e0837e4678ce73a3b32a07955d3d0.jpg" alt="Proteção Solar" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Proteção Solar</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-2">
+<img src="https://public.readdy.ai/ai/img_res/1931adfbd15875407b2ae5cbec3c909b.jpg" alt="Tratamentos" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center whitespace-nowrap overflow-hidden text-overflow-ellipsis">Tratamentos</span>
+</div>
+</div>
+</div>
+<!-- Featured Products -->
+<div class="mb-8">
+<div class="px-4 mb-3 flex justify-between items-center">
+<h2 class="text-lg font-semibold">Mais Vendidos</h2>
+<a href="#" class="text-primary text-sm font-medium cursor-pointer">Ver todos</a>
+</div>
+<div class="hide-scroll-bar overflow-x-auto pl-4">
+<div class="flex gap-4 pb-4 w-max">
+<!-- Product 1 -->
+<div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-36 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/8d82e33557f03e4f78ce2fcc061f2931.jpg" alt="Sérum Facial" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-2">
+<div class="flex items-center mb-1">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-half-fill text-yellow-400 text-xs"></i>
+<span class="text-xs text-gray-500 ml-1">4.5</span>
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Sérum Vitamina C</h3>
+<p class="text-primary font-semibold text-sm mb-2">R$ 89,90</p>
+<button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-36 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/1c32341639afc38e4c33d24b5b776042.jpg" alt="Hidratante Facial" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-2">
+<div class="flex items-center mb-1">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs text-gray-500 ml-1">5.0</span>
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Hidratante Noturno</h3>
+<p class="text-primary font-semibold text-sm mb-2">R$ 75,90</p>
+<button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-36 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/f2e38148b57d80506ffe8d7f64b18c92.jpg" alt="Protetor Solar" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-2">
+<div class="flex items-center mb-1">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-line text-yellow-400 text-xs"></i>
+<span class="text-xs text-gray-500 ml-1">4.0</span>
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Protetor Solar FPS 50</h3>
+<p class="text-primary font-semibold text-sm mb-2">R$ 65,90</p>
+<button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="w-36 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-36 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/bfff06c7746b8b17a5c6582614bc1cee.jpg" alt="Água Micelar" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-2">
+<div class="flex items-center mb-1">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-half-fill text-yellow-400 text-xs"></i>
+<span class="text-xs text-gray-500 ml-1">4.7</span>
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2 h-10">Água Micelar Suave</h3>
+<p class="text-primary font-semibold text-sm mb-2">R$ 45,90</p>
+<button class="w-full bg-primary text-white py-1 text-xs !rounded-button cursor-pointer">Adicionar</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Offers Section -->
+<div class="px-4 mb-8">
+<h2 class="text-lg font-semibold mb-4">Ofertas Especiais</h2>
+<div class="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-4 flex items-center">
+<div class="w-1/2">
+<h3 class="text-base font-semibold mb-1">15% OFF</h3>
+<p class="text-xs mb-3">Em todos os produtos para pele sensível</p>
+<button class="bg-primary text-white py-1.5 px-3 text-xs !rounded-button cursor-pointer">Ver Ofertas</button>
+</div>
+<div class="w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/bc9828b40fe7455b49180e7d0ad301b7.jpg" alt="Ofertas especiais" class="w-full h-auto rounded-lg">
+</div>
+</div>
+</div>
+<!-- Tips Section -->
+<div class="mb-8">
+<div class="px-4 mb-3">
+<h2 class="text-lg font-semibold">Dicas de Skincare</h2>
+</div>
+<div class="hide-scroll-bar overflow-x-auto pl-4">
+<div class="flex gap-4 pb-4 w-max">
+<!-- Tip 1 -->
+<div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-32 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/230f94d2a83f9f864ad6a14d035bb979.jpg" alt="Dica de skincare" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Como aplicar sérum corretamente</h3>
+<p class="text-xs text-gray-600 mb-2 line-clamp-2">Aprenda a técnica correta para maximizar os benefícios do seu sérum facial.</p>
+<a href="#" class="text-primary text-xs font-medium cursor-pointer">Ler mais</a>
+</div>
+</div>
+<!-- Tip 2 -->
+<div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-32 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/c2383bef32d0a2d10ccb12a83d31585c.jpg" alt="Dica de skincare" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Máscaras faciais para cada tipo de pele</h3>
+<p class="text-xs text-gray-600 mb-2 line-clamp-2">Descubra qual a máscara ideal para o seu tipo de pele e seus benefícios.</p>
+<a href="#" class="text-primary text-xs font-medium cursor-pointer">Ler mais</a>
+</div>
+</div>
+<!-- Tip 3 -->
+<div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-32 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/1dcb0a4dd9a195f87d4b9256f09cbe49.jpg" alt="Dica de skincare" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Proteção solar diária: por que é essencial</h3>
+<p class="text-xs text-gray-600 mb-2 line-clamp-2">Entenda a importância do protetor solar mesmo em dias nublados.</p>
+<a href="#" class="text-primary text-xs font-medium cursor-pointer">Ler mais</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Before & After Results -->
+<div class="px-4 mb-8">
+<div class="flex justify-between items-center mb-3">
+<h2 class="text-lg font-semibold">Resultados Reais</h2>
+<a href="#" class="text-primary text-sm font-medium cursor-pointer">Ver todos</a>
+</div>
+<div class="relative">
+<div class="hide-scroll-bar overflow-x-auto">
+<div class="flex gap-4 pb-4 w-max">
+<!-- Result 1 -->
+<div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/9ad335477dd575fcbba683ca150df02f/d3eef012ab0cfcc60fce6ab424675195.jpeg" alt="Aplicação de sérum facial" class="w-full h-full object-cover">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Hidratação Profunda</h3>
+<p class="text-xs text-gray-600 mb-2">Resultados após 2 semanas de uso do nosso sérum facial.</p>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-red-500">
+<i class="ri-heart-line"></i>
+</div>
+<span class="text-xs text-gray-500 ml-1">128</span>
+</div>
+</div>
+</div>
+<!-- Result 2 -->
+<div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/6c3bbd6da8eaa57d24fbb5e7f7dd2326.jpg" alt="Resultado de tratamento" class="w-full h-full object-cover">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Pele Radiante</h3>
+<p class="text-xs text-gray-600 mb-2">Resultados após 4 semanas de tratamento completo.</p>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-red-500">
+<i class="ri-heart-line"></i>
+</div>
+<span class="text-xs text-gray-500 ml-1">95</span>
+</div>
+</div>
+</div>
+<!-- Result 3 -->
+<div class="w-64 bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/263662752ad6059bfb4f6d6cb90b2e3c.jpg" alt="Antes e depois" class="w-full h-full object-cover">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Antes & Depois</h3>
+<p class="text-xs text-gray-600 mb-2">Transformação após 8 semanas com nossos produtos.</p>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-red-500">
+<i class="ri-heart-line"></i>
+</div>
+<span class="text-xs text-gray-500 ml-1">156</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 left-2 transform -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center shadow-sm cursor-pointer">
+<i class="ri-arrow-left-s-line"></i>
+</div>
+<div class="absolute top-1/2 right-2 transform -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center shadow-sm cursor-pointer">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div class="px-4 mb-8">
+<div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-4">
+<h2 class="text-base font-semibold mb-2">Inscreva-se na nossa newsletter</h2>
+<p class="text-xs text-gray-600 mb-3">Receba dicas de skincare e ofertas exclusivas diretamente no seu email.</p>
+<div class="flex gap-2 mb-3">
+<input type="email" placeholder="Seu email" class="flex-1 py-2 px-3 rounded-lg text-sm border-none bg-white focus:outline-none">
+<button class="bg-primary text-white py-2 px-4 !rounded-button text-sm font-medium cursor-pointer">Inscrever</button>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-gift-line"></i>
+</div>
+<p class="text-xs">10% de desconto na primeira compra</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Tab Bar -->
+<div class="fixed bottom-0 w-full bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50">
+<div class="grid grid-cols-5 h-16">
+<a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-5-fill text-primary"></i>
+</div>
+<span class="text-xs mt-1 text-primary">Início</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-apps-line text-gray-400"></i>
+</div>
+<span class="text-xs mt-1 text-gray-500">Categorias</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-heart-line text-gray-400"></i>
+</div>
+<span class="text-xs mt-1 text-gray-500">Favoritos</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-shopping-bag-line text-gray-400"></i>
+</div>
+<span class="text-xs mt-1 text-gray-500">Pedidos</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line text-gray-400"></i>
+</div>
+<span class="text-xs mt-1 text-gray-500">Perfil</span>
+</a>
+</div>
+</div>
+<!-- Floating Action Button -->
+<div class="fixed right-4 bottom-20 z-40">
+<button class="w-12 h-12 bg-primary rounded-full shadow-lg flex items-center justify-center cursor-pointer">
+<i class="ri-customer-service-2-fill text-white ri-lg"></i>
+</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Add to cart functionality
+const addButtons = document.querySelectorAll('button:not([type])');
+addButtons.forEach(button => {
+if (button.textContent.includes('Adicionar')) {
+button.addEventListener('click', function() {
+const productName = this.closest('div').querySelector('h3').textContent;
+// Create toast notification
+const toast = document.createElement('div');
+toast.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm z-50';
+toast.textContent = `${productName} adicionado ao carrinho`;
+document.body.appendChild(toast);
+// Remove toast after 2 seconds
+setTimeout(() => {
+toast.remove();
+}, 2000);
+});
+}
+});
+// Results carousel like functionality
+const likeButtons = document.querySelectorAll('.ri-heart-line');
+likeButtons.forEach(button => {
+button.addEventListener('click', function() {
+const countElement = this.parentElement.nextElementSibling;
+let count = parseInt(countElement.textContent);
+if (this.classList.contains('ri-heart-line')) {
+this.classList.remove('ri-heart-line');
+this.classList.add('ri-heart-fill');
+count += 1;
+} else {
+this.classList.remove('ri-heart-fill');
+this.classList.add('ri-heart-line');
+count -= 1;
+}
+countElement.textContent = count;
+});
+});
+// Carousel navigation
+const leftArrow = document.querySelector('.ri-arrow-left-s-line');
+const rightArrow = document.querySelector('.ri-arrow-right-s-line');
+const carousel = document.querySelector('.hide-scroll-bar');
+if (leftArrow && rightArrow && carousel) {
+leftArrow.addEventListener('click', function() {
+carousel.scrollBy({ left: -280, behavior: 'smooth' });
+});
+rightArrow.addEventListener('click', function() {
+carousel.scrollBy({ left: 280, behavior: 'smooth' });
+});
+}
+});
+</script>
 </body>
 </html>
